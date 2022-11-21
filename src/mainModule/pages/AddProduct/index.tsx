@@ -16,10 +16,10 @@ import { useDispatch } from 'react-redux';
 import { createProductAction } from 'base/store/Products/actions';
 import { Button } from 'base/components/Button';
 
-const cities = [
-  { id: 1, name: 'Алматы' },
-  { id: 1, name: 'Актобе' },
-];
+// const cities = [
+//   { id: 1, name: 'Алматы' },
+//   { id: 1, name: 'Актобе' },
+// ];
 
 type AddProductProps = {};
 
@@ -51,8 +51,6 @@ export const AddProduct = ({}: AddProductProps) => {
   const [status, setStatus] = useState(['Активный', 'Архивный']);
   const [loadFile, setLoadFile] = useState<any>([]);
   const [isDrop, setIsDrop] = useState<boolean>(false);
-
-  const [price, setPrice] = useState<boolean>(false);
 
   const { handleChange, setFieldValue, values, setErrors } = useFormik<AddProductFieldsType>({
     initialValues,
